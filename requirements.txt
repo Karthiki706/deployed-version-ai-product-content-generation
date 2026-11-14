@@ -1,0 +1,42 @@
+# ============================================================
+# Enterprise Multi-Agent Product Content Generation Platform — Dependencies
+# ============================================================
+# Root-level requirements.txt (read by Streamlit Community Cloud
+# and used for local development / Docker).
+#
+# Deployment targets:
+#   Frontend  → Streamlit Community Cloud
+#   Backend   → Render (FastAPI / Uvicorn)
+# ============================================================
+
+# ------ Backend: FastAPI & Server ------
+fastapi==0.115.12
+uvicorn==0.34.0
+
+# ------ Data Validation ------
+pydantic==2.12.5
+pydantic-settings==2.8.1
+
+# ------ Google Gemini AI SDK ------
+google-genai==2.11.0
+
+# ------ Frontend: Streamlit ------
+streamlit==1.59.1
+
+# ------ HTTP Client (frontend → backend REST calls) ------
+requests==2.33.1
+
+# ------ Local Development: .env file loading ------
+# Wrapped in try/except in code — safe to install on Cloud too.
+python-dotenv==1.1.0
+
+# ------ Testing ------
+pytest==9.1.1
+
+# ------ Orchestration ------
+langgraph==0.2.69
+
+
+
+# Testing (FastAPI TestClient)
+httpx==0.28.1

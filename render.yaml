@@ -1,0 +1,19 @@
+# Render Blueprint: deploys the FastAPI backend from the Dockerfile.
+# Render dashboard -> New -> Blueprint -> select this repo.
+services:
+  - type: web
+    name: product-content-agent-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false            # you paste this in the Render dashboard
+      - key: APP_API_KEY
+        generateValue: true    # copy this value into Streamlit secrets as APP_API_KEY
+      - key: AGENTIC_MODE
+        value: "true"
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "10"
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
