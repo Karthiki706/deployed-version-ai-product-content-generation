@@ -327,4 +327,5 @@ docker-compose up --build -d
 
 ## ✍️ Author
 
-*   **Kammala Kalyan** — [GitHub Profile](https://github.com/kammala-kalyan)
+kovelakuntla sai krishna karthik
+
